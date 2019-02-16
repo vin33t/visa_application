@@ -221,7 +221,7 @@ Dashboard
                 <div class="col-xl-6 col-lg-12 col-md-12 border-right-blue-grey border-right-lighten-5 clearfix">
                   <p><strong>Offer Letter Given:</strong>
                     <span class="text-muted"><strong>{{$offer_letter->count()}} Students</strong></span>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><a href="{{route('offer_letter.report')}}" class="btn btn-success btn-sm">Report</a></span>
+                    {{-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><a href="{{route('offer_letter.report')}}" class="btn btn-success btn-sm">Report</a></span> --}}
                   </p>
                   <div class="progress progress-sm mt-1 mb-0">
                     <div class="progress-bar bg-success" role="progressbar" style="width: @if($students->count()>0)
@@ -235,7 +235,7 @@ Dashboard
                
                   <p><strong>L.O.A Received:</strong>
                     <span class="text-muted"><strong>{{$LOA->count()}} Students</strong></span>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><a href="{{route('LOA.report')}}" class="btn btn-dark btn-sm">Report</a></span>
+                    {{-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><a href="{{route('LOA.report')}}" class="btn btn-dark btn-sm">Report</a></span> --}}
                   </p>
                   <div class="progress progress-sm mt-1 mb-0">
                     <div class="progress-bar bg-dark" role="progressbar" style="width: 
@@ -250,7 +250,7 @@ Dashboard
                 
                   <p><strong>Visa Submission:</strong>
                     <span class="text-muted"><strong>{{$visa_sub->count()}} Students</strong></span>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><a href="{{route('visa.report')}}" class="btn btn-info btn-sm">Report</a></span>
+                  {{--   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><a href="{{route('visa.report')}}" class="btn btn-info btn-sm">Report</a></span> --}}
                   </p>
                   <div class="progress progress-sm mt-1 mb-0">
                     <div class="progress-bar bg-info" role="progressbar" style="width: @if($students->count()>0)
@@ -264,7 +264,7 @@ Dashboard
                 <div class="col-xl-6 col-lg-12 col-md-12">
                   <p><strong>Refund:</strong>
                     <span class="text-muted"><strong>{{$refund->count()}} Students</strong></span>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><a href="{{route('refund.report')}}" class="btn btn-danger btn-sm">Report</a></span>
+                    {{-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><a href="{{route('refund.report')}}" class="btn btn-danger btn-sm">Report</a></span> --}}
                   </p>
                   <div class="progress progress-sm mt-1 mb-0">
                     <div class="progress-bar bg-danger" role="progressbar" style="width: @if($students->count()>0)
@@ -277,7 +277,7 @@ Dashboard
                 
                   <p><strong>Application fee:</strong>
                     <span class="text-muted"><strong>{{$application->count()}} Students</strong></span>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><a href="{{route('applicationFee.report')}}" class="btn btn-warning btn-sm">Report</a></span>
+                    {{-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><a href="{{route('applicationFee.report')}}" class="btn btn-warning btn-sm">Report</a></span> --}}
                   </p>
                   <div class="progress progress-sm mt-1 mb-0">
                     <div class="progress-bar bg-warning" role="progressbar" style="width: @if($students->count()>0)
@@ -290,8 +290,8 @@ Dashboard
                 
                   <p><strong>Tuition fee:</strong>
                     <span class="text-muted"><strong>{{$tuition->count()}} Students</strong></span>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><a href="{{route('tuitionFee.report')}}" class="btn btn-light btn-sm">Report</a></span>
+                    {{-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><a href="{{route('tuitionFee.report')}}" class="btn btn-light btn-sm">Report</a></span> --}}
                   </p>
                   <div class="progress progress-sm mt-1 mb-0">
                     <div class="progress-bar bg-light" role="progressbar" style="width: @if($students->count()>0)
@@ -304,7 +304,10 @@ Dashboard
                 </div>
               </div>
             </div>
-          </div>
+          </div><br>
+          <div class="text-center">
+            <a href="" class="btn btn-primary btn-sm">Generate Report</a>
+          </div><br>
         </div>
         <div class="card">
           <div class="card-content">
@@ -317,7 +320,7 @@ Dashboard
                 <div class="col-xl-6 col-lg-12 col-md-12 border-right-blue-grey border-right-lighten-5 clearfix">
                   <p><strong>Interested:</strong>
                     <span class="text-muted"><strong>{{$interested_agents->count()}} Agents</strong></span>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><a href="{{route('interestedAgents.report')}}" class="btn btn-success btn-sm">Report</a></span>
+                    {{-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><a href="{{route('interestedAgents.report')}}" class="btn btn-success btn-sm">Report</a></span> --}}
                   </p>
                   <div class="progress progress-sm mt-1 mb-0">
                     <div class="progress-bar bg-success" role="progressbar" style="width: @if($agents->count()>0)
@@ -331,7 +334,7 @@ Dashboard
                
                   <p><strong>Proposal Sent:</strong>
                     <span class="text-muted"><strong>{{$proposal_sent_agents->count()}} Agents</strong></span>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><a href="{{route('proposalSentAgents.report')}}" class="btn btn-dark btn-sm">Report</a></span>
+                    {{-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><a href="{{route('proposalSentAgents.report')}}" class="btn btn-dark btn-sm">Report</a></span> --}}
                   </p>
                   <div class="progress progress-sm mt-1 mb-0">
                     <div class="progress-bar bg-dark" role="progressbar" style="width: 
@@ -346,7 +349,7 @@ Dashboard
                 
                   <p><strong>Document Received:</strong>
                     <span class="text-muted"><strong>{{$document_received_agents->count()}} Agents</strong></span>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><a href="{{route('documentReceivedAgents.report')}}" class="btn btn-info btn-sm">Report</a></span>
+                    {{-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><a href="{{route('documentReceivedAgents.report')}}" class="btn btn-info btn-sm">Report</a></span> --}}
                   </p>
                   <div class="progress progress-sm mt-1 mb-0">
                     <div class="progress-bar bg-info" role="progressbar" style="width: @if($agents->count()>0)
@@ -360,7 +363,7 @@ Dashboard
                 <div class="col-xl-6 col-lg-12 col-md-12">
                   <p><strong>Agreement Sent To Agent:</strong>
                     <span class="text-muted"><strong>{{$agreement_sent_agents->count()}} Agents</strong></span>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><a href="{{route('agreementSentAgents.report')}}" class="btn btn-danger btn-sm">Report</a></span>
+                    {{-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><a href="{{route('agreementSentAgents.report')}}" class="btn btn-danger btn-sm">Report</a></span> --}}
                   </p>
                   <div class="progress progress-sm mt-1 mb-0">
                     <div class="progress-bar bg-danger" role="progressbar" style="width: @if($students->count()>0)
@@ -373,7 +376,7 @@ Dashboard
                 
                   <p><strong>Agreement Signed By Agent:</strong>
                     <span class="text-muted"><strong>{{$agreement_signed_agent_agents->count()}} Agents</strong></span>
-                    <span><a href="{{route('agreementSignedAgents.report')}}" class="btn btn-warning btn-sm">Report</a></span>
+                    {{-- <span><a href="{{route('agreementSignedAgents.report')}}" class="btn btn-warning btn-sm">Report</a></span> --}}
                   </p>
                   <div class="progress progress-sm mt-1 mb-0">
                     <div class="progress-bar bg-warning" role="progressbar" style="width: @if($students->count()>0)
@@ -385,7 +388,7 @@ Dashboard
                   </div><hr>
                 
                   <p><strong>Agreement Signed By College</strong>
-                    <span class="text-muted"><strong>{{$agreement_signed_college_agents->count()}} Agents</strong></span><span><a href="{{route('agreementSignedCollege.report')}}" class="btn btn-light btn-sm">Report</a></span>
+                    <span class="text-muted"><strong>{{$agreement_signed_college_agents->count()}} Agents</strong></span>{{-- <span><a href="{{route('agreementSignedCollege.report')}}" class="btn btn-light btn-sm">Report</a></span> --}}
                   </p>
                   <div class="progress progress-sm mt-1 mb-0">
                     <div class="progress-bar bg-light" role="progressbar" style="width: @if($students->count()>0)
@@ -398,7 +401,10 @@ Dashboard
                 </div>
               </div>
             </div>
-          </div>
+          </div><br>
+          <div class="text-center">
+            <a href="{{route('agent.report')}}" class="btn btn-primary btn-sm">Generate Report</a>
+          </div><br>
         </div>
       </div>
       <div class="col-md-4">
@@ -406,11 +412,11 @@ Dashboard
               <div class="card-header">
                 <h5><strong>Agents ({{$agents->count()}})</strong></h5>
                 <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a>
-                <div class="heading-elements">
+                {{-- <div class="heading-elements">
                   <ul class="list-inline mb-0">
                     <a href="{{route('agent.report')}}" class="btn btn-primary btn-sm">Report</a>
                   </ul>
-                </div>
+                </div> --}}
               </div>
               <div class="card-content">
                 <div id="friends-activity" class="media-list ">
