@@ -62,14 +62,10 @@ class ReportsController extends Controller
     public function agent(Request $request){
         $agent_array = [];
         foreach ($request->option as $option) {
-            
-            $agent_array = agentProfile::where($option,'yes')->get();
-            // if ($agent->count()>0) {
-            //     $agent_array = array_merge($agent_array + $agent;)
-            // }
-            // $agent = null;       
+               $agent_array = $request->option;  
         }
-        dd($agent_array);
+        $agents= agentProfile::where($option,'yes')->get();
+        dd($agents);
         return view('reports.agent')->with('agents',agentProfile::orderBy('created_at','desc')->get());
     }
 

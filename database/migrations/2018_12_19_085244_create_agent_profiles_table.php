@@ -72,7 +72,7 @@ class CreateAgentProfilesTable extends Migration
 
             $table->string('agreement_signed_college')->default('no');
             $table->string('agreement_signed_college_date')->nullable();
-
+            $table->string('status')->nullable();
             
             $table->integer('total_files')->default(0);
             $table->integer('files_not_started')->default(0);

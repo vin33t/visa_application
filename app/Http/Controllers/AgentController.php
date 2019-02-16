@@ -384,11 +384,11 @@ class AgentController extends Controller
         $agent->document_received = $request->document_received;
         $agent->document_received_date = $request->document_received_date;
 
-        $agent->agreement_signed_agent = $request->agreement_signed_agent;
-        $agent->agreement_signed_agent_date = $request->agreement_signed_agent_date;
-
         $agent->agreement_sent = $request->agreement_sent;
         $agent->agreement_sent_date = $request->agreement_sent_date;
+        
+        $agent->agreement_signed_agent = $request->agreement_signed_agent;
+        $agent->agreement_signed_agent_date = $request->agreement_signed_agent_date;
 
         $agent->agreement_signed_college = $request->agreement_signed_college;
         $agent->agreement_signed_college_date = $request->agreement_signed_college_date;
@@ -397,6 +397,23 @@ class AgentController extends Controller
         $agent->certificate_issued_date = $request->certificate_issued_date;
         $agent->percentage = $request->percentage;
         $agent->save();
+        if ($agent->certificate_issued == 'yes') {
+            $agent->status = 'certificate_issued';
+        } elseif ($agent->agreement_signed_college == 'yes') {
+            $agent->status = 'agreement_signed_college';
+        } elseif ($agent->agreement_signed_agent == 'yes') {
+            $agent->status = 'agreement_signed_agent';
+        } elseif ($agent->agreement_sent == 'yes') {
+            $agent->status = 'agreement_sent';
+        } elseif ($agent->document_received == 'yes') {
+            $agent->status = 'document_received';
+        } elseif ($agent->proposal_sent == 'yes') {
+            $agent->status = 'proposal_sent';
+        } elseif ($agent->interested == 'yes') {
+            $agent->status = 'interested';
+        }
+        $agent->save();
+        
         Session::flash('success','Summary updated successfully');
         return redirect()->route('summary',['id'=>$agent->id]);
 
