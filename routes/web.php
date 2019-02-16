@@ -58,30 +58,30 @@ Route::get('/pastMonthTodos',[
 			'as'=>'pastMonthTodos'
 		]);
 //Reports
-	Route::get('/offer letter/report',[
-			'uses'=> 'ReportsController@offer_letter',
-			'as'=>'offer_letter.report'
-		]);
-	Route::get('/LOA/report',[
-			'uses'=> 'ReportsController@LOA',
-			'as'=>'LOA.report'
-		]);
-	Route::get('/visa/report',[
-			'uses'=> 'ReportsController@visa',
-			'as'=>'visa.report'
-		]);
-	Route::get('/refund/report',[
-			'uses'=> 'ReportsController@refund',
-			'as'=>'refund.report'
-		]);
-	Route::get('/Application fee/report',[
-			'uses'=> 'ReportsController@applicationFee',
-			'as'=>'applicationFee.report'
-		]);
-	Route::get('Tuition fee/report',[
-			'uses'=> 'ReportsController@tuitionFee',
-			'as'=>'tuitionFee.report'
-		]);
+	// Route::get('/offer letter/report',[
+	// 		'uses'=> 'ReportsController@offer_letter',
+	// 		'as'=>'offer_letter.report'
+	// 	]);
+	// Route::get('/LOA/report',[
+	// 		'uses'=> 'ReportsController@LOA',
+	// 		'as'=>'LOA.report'
+	// 	]);
+	// Route::get('/visa/report',[
+	// 		'uses'=> 'ReportsController@visa',
+	// 		'as'=>'visa.report'
+	// 	]);
+	// Route::get('/refund/report',[
+	// 		'uses'=> 'ReportsController@refund',
+	// 		'as'=>'refund.report'
+	// 	]);
+	// Route::get('/Application fee/report',[
+	// 		'uses'=> 'ReportsController@applicationFee',
+	// 		'as'=>'applicationFee.report'
+	// 	]);
+	// Route::get('Tuition fee/report',[
+	// 		'uses'=> 'ReportsController@tuitionFee',
+	// 		'as'=>'tuitionFee.report'
+	// 	]);
 	Route::get('agent/report',[
 			'uses'=> 'ReportsController@agent',
 			'as'=>'agent.report'
@@ -91,30 +91,30 @@ Route::get('/pastMonthTodos',[
 			'as'=>'lead.report'
 		]);
 
-	Route::get('interested-agents/report',[
-			'uses'=> 'ReportsController@interestedAgents',
-			'as'=>'interestedAgents.report'
-		]);
-	Route::get('proposal-sent-agents/report',[
-			'uses'=> 'ReportsController@proposalSentAgents',
-			'as'=>'proposalSentAgents.report'
-		]);
-	Route::get('document-received-agents/report',[
-			'uses'=> 'ReportsController@documentReceivedAgents',
-			'as'=>'documentReceivedAgents.report'
-		]);
-	Route::get('agreement-sent-agents/report',[
-			'uses'=> 'ReportsController@agreementSentAgents',
-			'as'=>'agreementSentAgents.report'
-		]);
-	Route::get('agreement-signed-agents/report',[
-			'uses'=> 'ReportsController@agreementSignedAgents',
-			'as'=>'agreementSignedAgents.report'
-		]);
-	Route::get('agreement-signed-college/report',[
-			'uses'=> 'ReportsController@agreementSignedCollege',
-			'as'=>'agreementSignedCollege.report'
-		]);
+	// Route::get('interested-agents/report',[
+	// 		'uses'=> 'ReportsController@interestedAgents',
+	// 		'as'=>'interestedAgents.report'
+	// 	]);
+	// Route::get('proposal-sent-agents/report',[
+	// 		'uses'=> 'ReportsController@proposalSentAgents',
+	// 		'as'=>'proposalSentAgents.report'
+	// 	]);
+	// Route::get('document-received-agents/report',[
+	// 		'uses'=> 'ReportsController@documentReceivedAgents',
+	// 		'as'=>'documentReceivedAgents.report'
+	// 	]);
+	// Route::get('agreement-sent-agents/report',[
+	// 		'uses'=> 'ReportsController@agreementSentAgents',
+	// 		'as'=>'agreementSentAgents.report'
+	// 	]);
+	// Route::get('agreement-signed-agents/report',[
+	// 		'uses'=> 'ReportsController@agreementSignedAgents',
+	// 		'as'=>'agreementSignedAgents.report'
+	// 	]);
+	// Route::get('agreement-signed-college/report',[
+	// 		'uses'=> 'ReportsController@agreementSignedCollege',
+	// 		'as'=>'agreementSignedCollege.report'
+	// 	]);
 
 
 
