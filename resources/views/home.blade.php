@@ -403,7 +403,7 @@ Dashboard
             </div>
           </div><br>
           <div class="text-center">
-            <button type="button" class="btn btn-sm btn-default" data-toggle="modal" data-target="#modal-agent"><span style="color: white">Generate Report</span></button>
+            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModalCenter">Generate Report</button> 
           </div><br>
         </div>
       </div>
@@ -447,6 +447,41 @@ Dashboard
             </div>
       </div>
     </div> 
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-success">
+        <h5 class="modal-title" id="exampleModalLongTitle" style="color: white"><strong>Please Check The Fields To Generate Agent Report</strong></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form action="{{route('agent.report')}}" method="post" >
+      @csrf
+      <div class="modal-body">
+          <div class="form-group" >
+            <label for="option[]">Interested</label>
+            <input type="checkbox" name="option[]" value="interested" checked>&nbsp;&nbsp;
+            <label for="option[]">Proposal Sent</label>
+            <input type="checkbox" name="option[]" value="proposal_sent" checked>&nbsp;&nbsp;
+            <label for="option[]">Agreement Sent To Agent </label>
+            <input type="checkbox" name="option[]" value="agreement_sent" checked>&nbsp;&nbsp;
+            <label for="option[]">Document Received</label>
+            <input type="checkbox" name="option[]" value="document_received" checked>&nbsp;&nbsp;
+            <label for="option[]">Agreement Signed By Agent</label>
+            <input type="checkbox" name="option[]" value="agreement_signed_agent" checked>&nbsp;&nbsp;
+            <label for="option[]">Agreement Signed By College</label>
+            <input type="checkbox" name="option[]" value="agreement_signed_college" checked>&nbsp;&nbsp;
+          </div>
+      </div>
+      <div class="modal-footer bg-success" >
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Generate Report</button>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
 @endsection
 @section('js')
 

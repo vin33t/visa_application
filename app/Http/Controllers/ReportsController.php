@@ -51,7 +51,6 @@ class ReportsController extends Controller
     public function lead(Request $request){
         $array =[];
         foreach ($request->interested as $interested) {
-            # code...
             $array = $request->interested;
         }
             $leads = leads::whereIn('interested',$array)->get();
@@ -61,6 +60,16 @@ class ReportsController extends Controller
     }
 
     public function agent(Request $request){
+        $agent_array = [];
+        foreach ($request->option as $option) {
+            
+            $agent_array = agentProfile::where($option,'yes')->get();
+            // if ($agent->count()>0) {
+            //     $agent_array = array_merge($agent_array + $agent;)
+            // }
+            // $agent = null;       
+        }
+        dd($agent_array);
         return view('reports.agent')->with('agents',agentProfile::orderBy('created_at','desc')->get());
     }
 
