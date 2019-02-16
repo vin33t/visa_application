@@ -403,7 +403,7 @@ Dashboard
             </div>
           </div><br>
           <div class="text-center">
-            <a href="{{route('agent.report')}}" class="btn btn-primary btn-sm">Generate Report</a>
+            <button type="button" class="btn btn-sm btn-default" data-toggle="modal" data-target="#modal-agent"><span style="color: white">Generate Report</span></button>
           </div><br>
         </div>
       </div>

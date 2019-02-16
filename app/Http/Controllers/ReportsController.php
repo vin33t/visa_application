@@ -60,7 +60,7 @@ class ReportsController extends Controller
         return view('reports.lead')->with('leads',$leads);
     }
 
-    public function agent(){
+    public function agent(Request $request){
         return view('reports.agent')->with('agents',agentProfile::orderBy('created_at','desc')->get());
     }
 

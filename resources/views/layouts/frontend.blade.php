@@ -197,7 +197,7 @@ $missed_todos_five = todo::where('date',$yesterday_date)->where('status',3)->tak
         
         <li><a class="menu-item" href="{{route('agent.report')}}"><i class="fa fa-file menu-icon"></i>Agent Report</a>
         </li>
-        <li><a class="menu-item" href="{{route('applicationFee.report')}}"><i class="fa fa-file menu-icon"></i>Application Fee Report</a>
+        {{-- <li><a class="menu-item" href="{{route('applicationFee.report')}}"><i class="fa fa-file menu-icon"></i>Application Fee Report</a>
           <li><a class="menu-item" href="{{route('LOA.report')}}"><i class="fa fa-file menu-icon"></i>LOA Report</a>
         </li>
         <li><a class="menu-item" href="{{route('offer_letter.report')}}"><i class="fa fa-file menu-icon"></i>Offer Letter Report</a>
@@ -207,7 +207,7 @@ $missed_todos_five = todo::where('date',$yesterday_date)->where('status',3)->tak
         <li><a class="menu-item" href="{{route('tuitionFee.report')}}"><i class="fa fa-file menu-icon"></i>Tuition Fee Report</a>
         </li>
         <li><a class="menu-item" href="{{route('visa.report')}}"><i class="fa fa-file menu-icon"></i>Visa Report</a>
-        </li>
+        </li> --}}
         {{-- <li><a class="menu-item" href="{{route('lead.report')}}"><i class="fa fa-file menu-icon"></i>Lead Report</a>
         </li> --}}
           

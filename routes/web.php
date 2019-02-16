@@ -82,7 +82,7 @@ Route::get('/pastMonthTodos',[
 	// 		'uses'=> 'ReportsController@tuitionFee',
 	// 		'as'=>'tuitionFee.report'
 	// 	]);
-	Route::get('agent/report',[
+	Route::post('agent/report',[
 			'uses'=> 'ReportsController@agent',
 			'as'=>'agent.report'
 		]);
