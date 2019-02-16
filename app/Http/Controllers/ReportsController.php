@@ -64,9 +64,9 @@ class ReportsController extends Controller
         foreach ($request->option as $option) {
                $agent_array = $request->option;  
         }
-        $agents= agentProfile::where($option,'yes')->get();
-        dd($agents);
-        return view('reports.agent')->with('agents',agentProfile::orderBy('created_at','desc')->get());
+        $agents= agentProfile::whereIn('status',$agent_array)->get();
+        // dd($agents);
+        return view('reports.agent')->with('agents',$agents);
     }
 
     // public function interestedAgents(){

@@ -366,8 +366,8 @@ Dashboard
                     {{-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><a href="{{route('agreementSentAgents.report')}}" class="btn btn-danger btn-sm">Report</a></span> --}}
                   </p>
                   <div class="progress progress-sm mt-1 mb-0">
-                    <div class="progress-bar bg-danger" role="progressbar" style="width: @if($students->count()>0)
-                    {{(($agreement_sent_agents->count()/$students->count())*100)}}%
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: @if($agents->count()>0)
+                    {{(($agreement_sent_agents->count()/$agents->count())*100)}}%
                     @else
                     0%
                     @endif" aria-valuenow="25"
@@ -379,8 +379,8 @@ Dashboard
                     {{-- <span><a href="{{route('agreementSignedAgents.report')}}" class="btn btn-warning btn-sm">Report</a></span> --}}
                   </p>
                   <div class="progress progress-sm mt-1 mb-0">
-                    <div class="progress-bar bg-warning" role="progressbar" style="width: @if($students->count()>0)
-                    {{(($agreement_signed_agent_agents->count()/$students->count())*100)}}%
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: @if($agents->count()>0)
+                    {{(($agreement_signed_agent_agents->count()/$agents->count())*100)}}%
                     @else
                     0%
                     @endif" aria-valuenow="25"
@@ -391,8 +391,8 @@ Dashboard
                     <span class="text-muted"><strong>{{$agreement_signed_college_agents->count()}} Agents</strong></span>{{-- <span><a href="{{route('agreementSignedCollege.report')}}" class="btn btn-light btn-sm">Report</a></span> --}}
                   </p>
                   <div class="progress progress-sm mt-1 mb-0">
-                    <div class="progress-bar bg-light" role="progressbar" style="width: @if($students->count()>0)
-                    {{(($agreement_signed_college_agents->count()/$students->count())*100)}}%
+                    <div class="progress-bar bg-light" role="progressbar" style="width: @if($agents->count()>0)
+                    {{(($agreement_signed_college_agents->count()/$agents->count())*100)}}%
                     @else
                     0%
                     @endif" aria-valuenow="25"
